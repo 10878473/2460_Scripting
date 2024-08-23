@@ -21,9 +21,10 @@ public class GridCubes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //instantiate a grid, 20x20 of 2x2 cubes 2 units apart. 
+        //instantiate a flat grid, 20x20 of 2x2 cubes 2 units apart(should be flush). 
         GenerateGrid(30,30);
 
+        //Randomize color of cubes in the grid 
         for (int i = 0; i < cubes.Count; i++)
         {
             Color randcolor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);

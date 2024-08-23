@@ -17,6 +17,7 @@ public class ExplosiveBox : MonoBehaviour
     {
         
     }
+    //if it hits another cube, flash red and grey then creates a physics explosion and deletes self.
     void OnTriggerEnter(Collider other){
         if (other.CompareTag("Player") || other.CompareTag("CubeGang"))
         {
@@ -33,6 +34,7 @@ public class ExplosiveBox : MonoBehaviour
             yield return new WaitForSeconds(.25f);
             
         }
+        //from documentation about physics explosions 
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider nearby in colliders){
             Rigidbody rb = nearby.GetComponent<Rigidbody>();
