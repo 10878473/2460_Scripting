@@ -1,3 +1,6 @@
 [submodule "Challenge 0-Submodules/Assets/Scripts-Submodule-test"]
 	path = Challenge 0-Submodules/Assets/Scripts-Submodule-test
 	url = https://github.com/10878473/Scripts-Submodule-test
+[submodule "Submodules challenge game 2/Assets/ScriptsSubmodule"]
+	path = Submodules challenge game 2/Assets/ScriptsSubmodule
+	url = https://github.com/10878473/Scripts-Submodule-test
