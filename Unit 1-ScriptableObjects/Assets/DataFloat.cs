@@ -12,7 +12,8 @@ public class DataFloat : ScriptableObject
         value += number;        
     }
     public void DecreaseValue(float number){
-        value -= number;    
+        value -= number;
+        Debug.Log("Lowered value to"+value);
     }
     public void SetValue(float number){
         value = number;    
