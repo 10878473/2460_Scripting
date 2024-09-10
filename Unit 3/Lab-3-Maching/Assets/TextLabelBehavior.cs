@@ -10,6 +10,7 @@ using UnityEngine.Events;
 public class TextLabelBehavior : MonoBehaviour
 {
     private TMP_Text label;
+    
 
     public UnityEvent startEvent;
     // Start is called before the first frame update
