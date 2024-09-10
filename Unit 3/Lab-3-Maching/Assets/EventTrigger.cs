@@ -23,7 +23,7 @@ public class EventTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Triggering event, gameobject "+ gameObject.name + "triggered from collider "+ other.gameObject.name);
+        Debug.Log("Triggering event, gameobject "+ gameObject.name + "triggered from collider "+ other.gameObject.name);
         TriggerEnterEvent.Invoke();
     }
     private void OnTriggerExit(Collider other)

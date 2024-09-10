@@ -8,9 +8,10 @@ public class MatchBehavior : MonoBehaviour
 {
     public ID idObj;
     public UnityEvent matchEvent, noMatchEvent;
-
-    private void OnTriggerEnter(Collider other)
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Trigger happened");
         var tempObj = other.GetComponent<IDContainerBehavior>();
         if (tempObj ==null)
         {

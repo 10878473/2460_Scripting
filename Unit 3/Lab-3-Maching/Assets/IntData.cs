@@ -16,6 +16,13 @@ public class IntData : ScriptableObject
         Debug.Log("IntData value is now" + value);
     }
 
+    public void removeValue(int number)
+    {
+        Debug.Log("Removing " + number + " to IntData");
+        value -= number;
+        Debug.Log("IntData value is now" + value);
+    }
+
     public void setValue(int number)
     {
         value = number;
