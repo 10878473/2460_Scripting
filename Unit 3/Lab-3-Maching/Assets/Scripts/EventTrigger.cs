@@ -10,6 +10,8 @@ public class EventTrigger : MonoBehaviour
 
     public UnityEvent StartEvent;
     public UnityEvent awakeEvent;
+    public UnityEvent DisableEvent;
+    public UnityEvent EnableEvent;
     //when the gameobject collides with another gameobject - trigger something from a scriptableobject
     private void Start()
     {
@@ -35,4 +37,13 @@ public class EventTrigger : MonoBehaviour
         Debug.Log(gameObject.name + "collided with collision "+ other.gameObject.name);
         TriggerEnterEvent.Invoke();
     }*/
+    private void OnEnable()
+    {
+        EnableEvent.Invoke();
+    }
+
+    private void OnDisable()
+    {
+        DisableEvent.Invoke();
+    }
 }
