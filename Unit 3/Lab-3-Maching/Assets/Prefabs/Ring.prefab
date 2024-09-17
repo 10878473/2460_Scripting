@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2633109315215482117}
   - component: {fileID: 197697185631022792}
-  m_Layer: 0
-  m_Name: Dot
+  m_Layer: 7
+  m_Name: InsideRingDot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1807968569, guid: dbbf078f0c411ad4dbe0adf1beec165d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4943396, g: 0.4943396, b: 0.4943396, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,8 +99,8 @@ GameObject:
   - component: {fileID: 6312921983381869621}
   - component: {fileID: 3668388921774744040}
   - component: {fileID: 2560712010371096432}
-  m_Layer: 0
-  m_Name: circle
+  m_Layer: 7
+  m_Name: Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
