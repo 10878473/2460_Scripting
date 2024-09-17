@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: V3List
   m_EditorClassIdentifier: 
   Vector3Dlist:
-  - {fileID: 11400000, guid: d10a39db8ead3e04bb0d31e7055184e1, type: 2}
-  - {fileID: 11400000, guid: 2d2a4b86c13d56446a2b801f4845adeb, type: 2}
+  - {fileID: 11400000, guid: c3b9977dfa5ebf248a2a0b46d80aaf0e, type: 2}
   - {fileID: 11400000, guid: afa7149969871dd4cbba4496f6866edc, type: 2}
+  - {fileID: 11400000, guid: 2d2a4b86c13d56446a2b801f4845adeb, type: 2}
+  - {fileID: 11400000, guid: d10a39db8ead3e04bb0d31e7055184e1, type: 2}
+  - {fileID: 11400000, guid: 9a98a16c9be9c194791a9258cf9e31a5, type: 2}
