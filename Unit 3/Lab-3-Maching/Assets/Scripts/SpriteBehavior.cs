@@ -18,6 +18,7 @@ public class SpriteBehavior : MonoBehaviour
         rendererObj.color = obj.currentColor.value;
     }
 
+    
     /*public void RandomizeFromListColor(ColorIDList obj)
     {
         rendererObj.color = obj.colorIDs[Random.Range(0,obj.colorIDs.Count -1)].value;

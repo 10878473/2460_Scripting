@@ -20,6 +20,7 @@ public class MatchBehavior : MonoBehaviour
         if (otherID == idObj)
         {
             matchEvent.Invoke();
+            Debug.Log("Match MADE with " + other.name);
         }
         else
         {
@@ -27,6 +28,12 @@ public class MatchBehavior : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             noMatchDelayedEvent.Invoke();
         }
+    }
+
+    public void setID(ColorIDList ColorIDListObj)
+    {
+        idObj = ColorIDListObj.currentColor;
+
     }
    
 }
