@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Instancer : MonoBehaviour
+[CreateAssetMenu]
+public class Instancer : ScriptableObject
 {
     public GameObject prefab;
     private int countingNum=0;

@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2d0ef4e6-48f0-40f2-a057-5589595e9fe4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab-3-Maching/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab-3-Maching/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anims/UIAnims/UIAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anims/UIAnims/UIAnimatorController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anims/UIAnims/Play.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anims/UIAnims/Play.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ring.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ring.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/123 Go.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/123 Go.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Instancer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Instancer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +21,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MatchBehavior.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColorIDList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColorMatchBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DestroyBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MatchBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TmproTextLabelBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Vector3Data.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Vector3DataList.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -97,6 +105,8 @@
       <workItem from="1725938565166" duration="2973000" />
       <workItem from="1725941709399" duration="983000" />
       <workItem from="1725989250409" duration="1473000" />
+      <workItem from="1726508443619" duration="14853000" />
+      <workItem from="1726686548309" duration="564000" />
     </task>
     <servers />
   </component>
