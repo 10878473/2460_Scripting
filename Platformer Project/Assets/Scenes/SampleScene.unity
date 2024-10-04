@@ -239,7 +239,6 @@ GameObject:
   - component: {fileID: 403491398}
   - component: {fileID: 403491397}
   - component: {fileID: 403491396}
-  - component: {fileID: 403491399}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -333,27 +332,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403491394}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &403491399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403491394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2c5f6213c8f43e48b6707d3f1acd858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startDragEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  endDragEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  draggable: 0
-  position: {x: 0, y: 0, z: 0}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &469061196
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,7 +815,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.12, y: 0.38999987, z: -49.29}
-  m_LocalScale: {x: 5.5679, y: 1, z: 7.6956}
+  m_LocalScale: {x: 70.07759, y: 1, z: 7.6956}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 670976653}
@@ -1438,6 +1416,7 @@ GameObject:
   - component: {fileID: 1291557323}
   - component: {fileID: 1291557322}
   - component: {fileID: 1291557321}
+  - component: {fileID: 1291557326}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1559,6 +1538,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291557326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291557320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d631fcf9a5c88045ab66c8d4423373c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 4
+  gravity: -17.74
+  maxJumps: 3
 --- !u!1 &1787061154
 GameObject:
   m_ObjectHideFlags: 0
