@@ -23,10 +23,11 @@ public class CharacterSideScroller : MonoBehaviour
         HorizontalMovement();
         ApplyGravity();
         Jump();
-        SetZPositionToZero();
+        
 
         // Apply all movement
         controller.Move(velocity * Time.deltaTime);
+        SetZPositionToZero();
     }
 
     private void HorizontalMovement()
@@ -58,7 +59,9 @@ public class CharacterSideScroller : MonoBehaviour
 
     private void SetZPositionToZero()
     {
-        var transform1 = transform;
+       // gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
+        
+        var transform1 = gameObject.transform;
         var position = transform1.position;
         position.z = 0;
         transform1.position = position;
