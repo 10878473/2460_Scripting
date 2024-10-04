@@ -7,3 +7,6 @@
 [submodule "Platformer Game\\Assets"]
 	path = Platformer Game\\Assets
 	url = https://github.com/10878473/Tools
+[submodule "Platformer Project/Assets/Tools"]
+	path = Platformer Project/Assets/Tools
+	url = https://github.com/10878473/Tools
