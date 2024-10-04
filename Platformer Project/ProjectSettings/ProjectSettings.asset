@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 4e88ab1f550c8984aa4dd8aa95d9577a
+  productGUID: 1aef7aed32d6ec6468120c006cc5926e
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Platformer Game
+  productName: Platformer Project
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -677,14 +677,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Platformer Game
+  metroPackageName: Platformer Project
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Platformer Game
+  metroApplicationDescription: Platformer Project
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -754,10 +754,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 9904ecd1-a49f-4771-b85e-79b807fc05e0
+  cloudProjectId: 3ebd5d5f-1abe-4b47-8192-fb19db73bae8
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Platformer Game
+  projectName: Platformer Project
   organizationId: unity_10878473
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
