@@ -12,6 +12,7 @@ public class EventTrigger : MonoBehaviour
     public UnityEvent awakeEvent;
     public UnityEvent DisableEvent;
     public UnityEvent EnableEvent;
+    public UnityEvent UpdateEvent, CollissionEvent, CollisionExitEvent, DestroyEvent;
     //when the gameobject collides with another gameobject - trigger something from a scriptableobject
     private void Start()
     {
@@ -32,11 +33,27 @@ public class EventTrigger : MonoBehaviour
     {
         TriggerExitEvent.Invoke();
     }
-    /*private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other)
     {
         Debug.Log(gameObject.name + "collided with collision "+ other.gameObject.name);
-        TriggerEnterEvent.Invoke();
-    }*/
+        CollissionEvent.Invoke();
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        CollisionExitEvent.Invoke();
+    }
+
+    private void OnDestroy()
+    {
+        DestroyEvent.Invoke();
+    }
+
+    private void updateEvent()
+    {
+        UpdateEvent.Invoke();
+    }
+
     private void OnEnable()
     {
         EnableEvent.Invoke();
