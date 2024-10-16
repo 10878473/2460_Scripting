@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 12012
+  controlID: 12602
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 12013
+  controlID: 12603
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 12014
+  controlID: 12604
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -242,7 +242,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9667fffffce4ffff32fbffffe8590000
+      m_ExpandedIDs: aa9effff0efbffff265b0000345c0000705c00005c5d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -643,7 +643,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 48, y: 48}
+      snapOffset: {x: 48, y: 10}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
@@ -662,9 +662,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.1620312, y: 1.5225072, z: 0.8126107}
+    m_Target: {x: 16.751719, y: 4.3423834, z: -1.6436415}
     speed: 2
-    m_Value: {x: 0.1620312, y: 1.5225072, z: 0.8126107}
+    m_Value: {x: 16.751719, y: 4.3423834, z: -1.6436415}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -710,13 +710,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.25077087, y: 0.20488766, z: -0.054397095, w: 0.9445686}
+    m_Target: {x: 0.26365045, y: 0.14602333, z: -0.040424313, w: 0.9526389}
     speed: 2
-    m_Value: {x: 0.25076663, y: 0.20488419, z: -0.054396175, w: 0.9445526}
+    m_Value: {x: 0.26365185, y: 0.14602411, z: -0.04042453, w: 0.952644}
   m_Size:
-    m_Target: 3.172711
+    m_Target: 4.7543793
     speed: 2
-    m_Value: 3.172711
+    m_Value: 4.7543793
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -910,7 +910,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts From Matching game
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -918,16 +918,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts From Matching game
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub Repositories\2460_Scripting\Platformer Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 58}
-    m_SelectedIDs: 985a0000
-    m_LastClickedID: 23192
-    m_ExpandedIDs: 00000000985a000000ca9a3bffffff7f
+    m_SelectedIDs: c45d0000
+    m_LastClickedID: 24004
+    m_ExpandedIDs: 00000000965d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -955,7 +955,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000985a000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000965d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1081,7 +1081,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 23088
+  m_LastSelectedObjectID: -21644
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
