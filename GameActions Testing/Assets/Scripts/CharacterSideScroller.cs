@@ -3,26 +3,26 @@ using UnityEngine;
 public class CharacterSideScroller : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 4f;
+    public float flightForce = 4f;
     public float gravity = -9.81f;
-    public int maxJumps = 2;
+    public int maxFlight = 5;
 
     private CharacterController controller;
     private Vector3 velocity;
-    private int jumpsRemaining;
+    public int flightRemaining;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        jumpsRemaining = maxJumps;
+        flightRemaining = maxFlight;
     }
 
     private void Update()
     {
-        // Calling our methods
+        // Calling our methods to affect velocity
         HorizontalMovement();
         ApplyGravity();
-        Jump();
+        Fly();
         
 
         // Apply all movement
@@ -46,15 +46,17 @@ public class CharacterSideScroller : MonoBehaviour
         else
         {
             velocity.y = 0;
-            jumpsRemaining = maxJumps;
+            flightRemaining = maxFlight;
         }
     }
 
-    private void Jump()
+    private void Fly()
     {
-        if (!Input.GetButton("Jump") || (!controller.isGrounded && jumpsRemaining <= 0)) return;
-        velocity.y = Mathf.Sqrt(jumpForce * -2 * gravity);
-        jumpsRemaining--;
+        if (!Input.GetButton("Jump") || (!controller.isGrounded && flightRemaining <= 0)) return;
+        if(velocity.y < flightForce){
+            velocity.y += flightForce;
+        }
+        flightRemaining--;
     }
 
     private void SetZPositionToZero()
@@ -65,5 +67,21 @@ public class CharacterSideScroller : MonoBehaviour
         var position = transform1.position;
         position.z = 0;
         transform1.position = position;
+    }
+
+    public void AddBounceVel(float vel)//can be called by the player, or by other scripts
+    {
+        velocity.y += vel * Time.deltaTime;
+    }
+
+    public void MegaBounce()// can be called by event systems
+    {
+        //Debug.Log("Player should be going up now");
+        velocity.y += 30f;
+    }
+
+    public void MediumBounce()// bounce can be called by event systems
+    {
+        velocity.y += 15f * Time.deltaTime;
     }
 }

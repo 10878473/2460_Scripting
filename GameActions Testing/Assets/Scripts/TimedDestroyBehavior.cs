@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyBehavior : MonoBehaviour
+public class TimedDestroyBehavior : MonoBehaviour
 {
     public float seconds = 1f;
     private WaitForSeconds wfs;
