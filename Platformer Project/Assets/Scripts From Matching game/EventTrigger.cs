@@ -17,6 +17,7 @@ public class EventTrigger : MonoBehaviour
     private void Start()
     {
         StartEvent.Invoke();
+        
     }
 
     private void Awake()
