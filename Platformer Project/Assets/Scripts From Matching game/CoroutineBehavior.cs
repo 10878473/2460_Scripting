@@ -5,7 +5,8 @@ using UnityEngine.Events;
 public class CoroutineBehavior : MonoBehaviour
 {
     public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
-    public IntData counterNum;
+    //public IntData counterNum;
+    public int counterNum;
     public bool _canRun = true;
     public float seconds = 3.0f;
     private WaitForSeconds wfsObj;
@@ -35,10 +36,10 @@ public class CoroutineBehavior : MonoBehaviour
         Debug.Log("Start from Coroutine script ran");
         yield return wfsObj;
 
-        while (counterNum.value > 0)
+        while (counterNum > 0)
         {
             repeatCountEvent.Invoke();
-            counterNum.value--;
+            counterNum--;
             yield return wfsObj;
             Debug.Log("run on start");
         }
