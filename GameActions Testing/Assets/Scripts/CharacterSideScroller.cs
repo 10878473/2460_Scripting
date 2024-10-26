@@ -1,20 +1,19 @@
 using UnityEngine;
-
 public class CharacterSideScroller : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float flightForce = 4f;
+    
     public float gravity = -9.81f;
-    public int maxFlight = 5;
-
     private CharacterController controller;
     private Vector3 velocity;
-    public int flightRemaining;
-
+   
+    public PlayerStats stats;
+    private int jumpsremaining;
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        flightRemaining = maxFlight;
+        stats.flightleft = stats.maxFlight;
+        jumpsremaining = stats.maxJumps;
+        
     }
 
     private void Update()
@@ -22,7 +21,14 @@ public class CharacterSideScroller : MonoBehaviour
         // Calling our methods to affect velocity
         HorizontalMovement();
         ApplyGravity();
-        Fly();
+        if (stats.isflying == true)
+        {
+            Fly();
+        }
+        else
+        {
+            Jump();
+        }
         
 
         // Apply all movement
@@ -33,7 +39,7 @@ public class CharacterSideScroller : MonoBehaviour
     private void HorizontalMovement()
     {
         var moveInput = Input.GetAxis("Horizontal");
-        var moveDirection = new Vector3(moveInput, 0f, 0f) * moveSpeed;
+        var moveDirection = new Vector3(moveInput, 0f, 0f) * stats.speed;
         velocity.x = moveDirection.x;
     }
 
@@ -46,17 +52,27 @@ public class CharacterSideScroller : MonoBehaviour
         else
         {
             velocity.y = 0;
-            flightRemaining = maxFlight;
+            stats.flightleft = stats.maxFlight;
+            jumpsremaining = stats.maxJumps;
         }
     }
 
+    
     private void Fly()
     {
-        if (!Input.GetButton("Jump") || (!controller.isGrounded && flightRemaining <= 0)) return;
-        if(velocity.y < flightForce){
-            velocity.y += flightForce;
+        if (!Input.GetButton("Jump") || (!controller.isGrounded && stats.flightleft <= 0)) return;
+        if(velocity.y < stats.flightpower){
+            velocity.y += stats.flightpower;
         }
-        flightRemaining--;
+        stats.flightleft--;
+    }
+    private void Jump()
+    {
+        if (!Input.GetButtonDown("Jump") || (!controller.isGrounded && jumpsremaining <= 0)) return;
+        if(velocity.y < stats.jumpHeight){
+            velocity.y += stats.jumpHeight;
+        }
+        jumpsremaining--;
     }
 
     private void SetZPositionToZero()

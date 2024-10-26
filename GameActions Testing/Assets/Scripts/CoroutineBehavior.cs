@@ -5,12 +5,12 @@ using UnityEngine.Events;
 public class CoroutineBehavior : MonoBehaviour
 {
     public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
-    public IntData counterNum;
+    public int counterNum;
     public bool _canRun = true;
-    public float seconds = 3.0f;
+    public float seconds = 1f;
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wfuObj;
-
+    private int counterOrigina;
     public bool CanRun
     {
         get => _canRun;
@@ -19,6 +19,7 @@ public class CoroutineBehavior : MonoBehaviour
 
     private void Start()
     {
+        counterOrigina = counterNum;
         startEvent.Invoke();
         wfsObj = new WaitForSeconds(seconds);
 
@@ -30,15 +31,16 @@ public class CoroutineBehavior : MonoBehaviour
     }
     private IEnumerator Counting()
     {
+        counterNum = counterOrigina;
         wfuObj = new WaitForFixedUpdate();
         startCountEvent.Invoke();
         Debug.Log("Start from Coroutine script ran");
         yield return wfsObj;
 
-        while (counterNum.value > 0)
+        while (counterNum > 0)
         {
             repeatCountEvent.Invoke();
-            counterNum.value--;
+            counterNum--;
             yield return wfsObj;
             Debug.Log("run on start");
         }
