@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 public class CharacterSideScroller : MonoBehaviour
 {
     
     public float gravity = -9.81f;
     private CharacterController controller;
     private Vector3 velocity;
-   
+    public UnityEvent playerjumped,playerlanded,playerdoublejumped;
     public PlayerStats stats;
     private int jumpsremaining;
     private void Start()
@@ -71,6 +72,7 @@ public class CharacterSideScroller : MonoBehaviour
         if (!Input.GetButtonDown("Jump") || (!controller.isGrounded && jumpsremaining <= 0)) return;
         if(velocity.y < stats.jumpHeight){
             velocity.y += stats.jumpHeight;
+            playerjumped.Invoke();
         }
         jumpsremaining--;
     }
