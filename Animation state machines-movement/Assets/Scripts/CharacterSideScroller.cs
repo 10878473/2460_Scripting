@@ -35,8 +35,9 @@ public class CharacterSideScroller : MonoBehaviour
         // Apply all movement
         controller.Move(velocity * Time.deltaTime);
         SetZPositionToZero();
+        checkFlyChange();
     }
-
+    
     private void HorizontalMovement()
     {
         var moveInput = Input.GetAxis("Horizontal");
@@ -58,7 +59,21 @@ public class CharacterSideScroller : MonoBehaviour
         }
     }
 
-    
+    public void checkFlyChange()
+    {
+        if (Input.GetAxis("Swap")>0)
+        {
+            if (stats.isflying == true)
+            {
+                stats.isflying = false;
+            }
+            else
+            {
+                stats.isflying = true;
+
+            }
+        }
+    }
     private void Fly()
     {
         if (!Input.GetButton("Jump") || (!controller.isGrounded && stats.flightleft <= 0)) return;
