@@ -33,7 +33,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: idle
+      name: Idle
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 1
@@ -62,11 +62,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: shoot
+      name: Shoot
       takeName: Take 001
       internalID: 9067093048684652814
       firstFrame: 25
-      lastFrame: 48
+      lastFrame: 49
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -91,10 +91,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: Hurt Anim
+      name: Hurt
       takeName: Take 001
-      internalID: 3060872287085348379
-      firstFrame: 49
+      internalID: -8481709605947105597
+      firstFrame: 50
       lastFrame: 74
       wrapMode: 0
       orientationOffsetY: 0

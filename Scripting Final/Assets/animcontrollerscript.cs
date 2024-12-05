@@ -8,12 +8,13 @@ public class animcontrollerscript : MonoBehaviour
 {
     public UnityEvent Run, Idle, runshoot, jump, land, flyshoot, idleshoot, cantshoot;
 
-    public bool running, airborn, flying, canshoot, idling;
+    public bool running, airborn, flying, canshoot, idling,wasairborn;
     public CharacterController controller;
     //private float inputy;
     private float inputfire;
     private float inputx;
     private float inputJump;
+    
     public PlayerStats stats;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class animcontrollerscript : MonoBehaviour
     {
         inputx = Input.GetAxis("Horizontal");
         //inputy = Input.GetAxis("Vertical");
-        inputfire = Input.GetAxis("fire1"); 
+        inputfire = Input.GetAxis("Fire1"); 
         inputJump = Input.GetAxis("Jump");
         airborn = !controller.isGrounded;
         if (!airborn && inputx != 0)
@@ -35,14 +36,16 @@ public class animcontrollerscript : MonoBehaviour
             {
                 Run.Invoke();
                 running = true;
+                Debug.Log("Running");
             }
         }
-        if (running && inputx != 0)
+        if (running && inputx == 0)
         {
             if (!idling)
             {
                 running = false;
                 idling = true;
+                Debug.Log("idling");
                 Idle.Invoke();
             }
         }
@@ -50,9 +53,16 @@ public class animcontrollerscript : MonoBehaviour
         if (!airborn && inputJump >0)
         {
             airborn = true;
+            wasairborn = true;
             jump.Invoke();
             
 
+        }
+
+        if (!airborn && wasairborn)
+        {
+            wasairborn = false;
+            land.Invoke();
         }
 
         if (idling && inputfire > 0 )
