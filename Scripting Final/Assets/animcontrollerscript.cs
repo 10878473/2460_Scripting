@@ -11,7 +11,7 @@ public class animcontrollerscript : MonoBehaviour
     //   USED VARIABLES
     public UnityEvent Run, Idle, runshoot, jump, land, flyshoot, idleshoot, cantshoot;
 
-    public bool running, airborn, flying, canshoot, idling,wasairborn, isGrounded;
+    public bool running, airborn, flying, canshoot, idling,wasairborn, isGrounded, canray;
     public CharacterController controller;
     //private float inputy;
     private float inputfire;
@@ -48,9 +48,13 @@ public class animcontrollerscript : MonoBehaviour
         inputJump = Input.GetAxis("Jump");
         airborn = !controller.isGrounded;
         // Define the point slightly below the character
-        rayStart = controller.transform.position + Vector3.down * (controller.height/2 + .1f);
+        rayStart = controller.transform.position + Vector3.down * (controller.height/2 - .1f);
         // Raycast downwards to check for ground
-        isGrounded = Physics.Raycast(rayStart, Vector3.down, .5f, groundMask);
+        if (canray)
+        {
+                    isGrounded = Physics.Raycast(rayStart, Vector3.down, .5f, groundMask);
+
+        }
         
     }
 
@@ -95,7 +99,7 @@ public class animcontrollerscript : MonoBehaviour
             
         }*/
         
-        if (inputJump !=0 && stats.isflying &&(running || idling))
+        if (inputJump !=0 && stats.isflying)
         {
             // If player was on the ground, then jumps, do jump anim.
             if (!wasairborn)
@@ -103,6 +107,10 @@ public class animcontrollerscript : MonoBehaviour
                 running = false;
                 idling = false;
                 wasairborn = true;
+                canray = false;
+                
+                StartCoroutine("jumpraycool");
+                
                 jump.Invoke();
             }
 
@@ -110,6 +118,7 @@ public class animcontrollerscript : MonoBehaviour
 
         if (isGrounded && wasairborn)
         {
+            Debug.Log("LANDING");
             wasairborn = false;
             land.Invoke();
         }
@@ -120,7 +129,8 @@ public class animcontrollerscript : MonoBehaviour
             {
                 canshoot = false;
                 idleshoot.Invoke();
-                cooldown();
+                StartCoroutine("cooldown");
+
             }
             else
             {
@@ -134,7 +144,7 @@ public class animcontrollerscript : MonoBehaviour
             {
                 canshoot = false;
                 runshoot.Invoke();
-                cooldown();
+                StartCoroutine("cooldown");
             }
             else
             {
@@ -148,7 +158,7 @@ public class animcontrollerscript : MonoBehaviour
             {
                 canshoot = false;
                 flyshoot.Invoke();
-                cooldown();
+                StartCoroutine("cooldown");
             }
             else
             {
@@ -162,6 +172,12 @@ public class animcontrollerscript : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         canshoot = true;
+    }
+
+    IEnumerator jumpraycool()
+    {
+        yield return new WaitForSeconds(.5f);
+        canray = true;
     }
         
 }
