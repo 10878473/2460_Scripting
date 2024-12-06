@@ -18,5 +18,5 @@ MonoBehaviour:
   maxJumps: 2
   flightpower: 4
   maxFlight: 200
-  flightleft: 200
-  isflying: 0
+  flightleft: 136
+  isflying: 1
