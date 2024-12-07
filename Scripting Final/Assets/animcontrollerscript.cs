@@ -23,7 +23,7 @@ public class animcontrollerscript : MonoBehaviour
     public LayerMask groundMask; // Specify what layers are considered ground
 
     //DEBUG VARIABLES
-    public TMP_Text grounded, isrunning, idle, wasinair;
+    public GameObject grounded, isrunning, idle, fire, landing;
     //
     
     
@@ -52,7 +52,7 @@ public class animcontrollerscript : MonoBehaviour
         // Raycast downwards to check for ground
         if (canray)
         {
-                    isGrounded = Physics.Raycast(rayStart, Vector3.down, .5f, groundMask);
+                    isGrounded = Physics.Raycast(rayStart, Vector3.down, 1f, groundMask);
 
         }
         
@@ -60,8 +60,40 @@ public class animcontrollerscript : MonoBehaviour
 
     void DisplayDebug()
     {
-        Debug.DrawRay(rayStart, Vector3.down * .5f, isGrounded ? Color.green : Color.red);
-        Debug.Log("Is Grounded: " + isGrounded);
+        Debug.DrawRay(rayStart, Vector3.down * 1f, isGrounded ? Color.green : Color.red);
+        //Debug.Log("Is Grounded: " + isGrounded);
+        if (isGrounded)
+        {
+            grounded.SetActive(true);
+        }
+        else
+        {
+            grounded.SetActive(false);
+        }
+        if (running)
+        {
+            isrunning.SetActive(true);
+        }
+        else
+        {
+            isrunning.SetActive(false);
+        }
+        if (idling)
+        {
+            idle.SetActive(true);
+        }
+        else
+        {
+            idle.SetActive(false);
+        }
+        if (inputfire != 0)
+        {
+            fire.SetActive(true);
+        }
+        else
+        {
+            fire.SetActive(false);
+        }
         
     }
 
@@ -73,7 +105,8 @@ public class animcontrollerscript : MonoBehaviour
             {
                 Run.Invoke();
                 running = true;
-                Debug.Log("Running");
+                idling = false;
+                //Debug.Log("Running");
             }
         }
         if (running && inputx == 0)
@@ -82,7 +115,7 @@ public class animcontrollerscript : MonoBehaviour
             {
                 running = false;
                 idling = true;
-                Debug.Log("idling");
+                //Debug.Log("idling");
                 
                 Idle.Invoke();
             }
@@ -118,9 +151,11 @@ public class animcontrollerscript : MonoBehaviour
 
         if (isGrounded && wasairborn)
         {
-            Debug.Log("LANDING");
+            //Debug.Log("LANDING");
             wasairborn = false;
             land.Invoke();
+            landing.SetActive(true);
+            StartCoroutine("landgoway");
         }
 
         if (idling && inputfire > 0 )
@@ -176,8 +211,14 @@ public class animcontrollerscript : MonoBehaviour
 
     IEnumerator jumpraycool()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1.5f);
         canray = true;
+    }
+
+    IEnumerator landgoway()
+    {
+        yield return new WaitForSeconds(.5f);
+        landing.SetActive(false);
     }
         
 }
