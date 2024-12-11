@@ -11,7 +11,7 @@ public class SimpleMoveBehavior : MonoBehaviour
     private bool stop = true;
     private Vector3 startPos;
 
-    private void Start()
+    void Start()
     {
         startPos = transform.position;
     }
