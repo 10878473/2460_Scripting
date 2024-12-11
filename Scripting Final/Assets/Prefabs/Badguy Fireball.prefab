@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1866563841169860972}
   - component: {fileID: 870223814262607953}
   - component: {fileID: 1134053290105611502}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Secondary Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4907,8 +4907,8 @@ GameObject:
   - component: {fileID: -3506009838446668999}
   - component: {fileID: 2146751291079580888}
   - component: {fileID: 232217831266625796}
-  m_Layer: 7
-  m_Name: Fireball
+  m_Layer: 12
+  m_Name: Badguy Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

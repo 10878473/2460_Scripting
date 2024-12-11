@@ -9,15 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec5004922460c749babf1a851a649a8, type: 3}
-  m_Name: Player1Stats
+  m_Script: {fileID: 11500000, guid: 02f29f4f2905a6e4ba1b630392842f53, type: 3}
+  m_Name: huh
   m_EditorClassIdentifier: 
-  maxhp: 20
-  hp: 15
-  speed: 5
-  jumpHeight: 10
-  maxJumps: 2
-  flightpower: 2
-  maxFlight: 50
-  flightleft: 50
-  isflying: 1

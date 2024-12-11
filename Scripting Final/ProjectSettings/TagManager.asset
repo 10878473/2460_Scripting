@@ -17,8 +17,8 @@ TagManager:
   - enemy
   - enemyscanplayer
   - powerup
-  - 
-  - 
+  - enemyBullet
+  - playercolliderhp
   - 
   - 
   - 
